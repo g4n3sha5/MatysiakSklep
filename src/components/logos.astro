@@ -1,0 +1,25 @@
+---
+// @ts-ignore
+import { Icon } from 'astro-icon';
+
+const partners = [
+  'dre',
+  'classen',
+  'quickstep',
+  'kaindl',
+  'logo-erkado',
+  'porta',
+  'krono',
+];
+---
+
+<div class='mt-24'>
+  <h2 class='text-center text-2xl text-slate-500'>Nasi partnerzy</h2>
+  <div class='flex gap-1 items-center justify-around mt-6 flex-wrap'>
+    {
+      partners.map((partner) => (
+        <img class='h-14' w-auto src={'/src/assets/' + partner + '.webp'} />
+      ))
+    }
+  </div>
+</div>

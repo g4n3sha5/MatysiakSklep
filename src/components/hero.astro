@@ -1,0 +1,22 @@
+---
+const offers = ['Okna', 'Drzwi', 'Podłogi'];
+---
+
+<main
+  class='flex text-center text-white items-center justify-center pb-0 overflow-hidden h-screen w-screen relative'>
+  <div
+    class='text-4xl flex justify-center tracking-tighter py-6 bg-[rgba(0,0,0,0.3)] absolute z-10 top-1/2 w-full'>
+    <h1 class='w-2/3'>
+      Kreujemy przestrzeń, która Cię inspiruje. Poznaj naszą ofertę montażu i
+      zobacz różnicę, jaką możemy sprawić.
+    </h1>
+  </div>
+  <div
+    class='z-10 flex absolute bottom-4 px-24 text-black bg-[rgba(255,255,255,0.4)]'>
+    {offers.map((offer) => <div class='p-5 text-xl font-bold'>{offer}</div>)}
+  </div>
+  <div
+    class="bg-[url('/src/assets/hero.webp')] bg-no-repeat bg-cover absolute inset-0 bg-top blur-[4px] invert-[21%] sepia-[10%]
+  saturate-[95%] hue-rotate-[235deg]">
+  </div>
+</main>

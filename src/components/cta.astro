@@ -1,0 +1,75 @@
+---
+// @ts-ignore
+import Container from '@components/container.astro';
+import { Icon } from 'astro-icon';
+
+const features = [
+  {
+    title: 'Doświadczenie',
+    description:
+      'Od ponad dekady dostarczamy wysokiej jakości produkty i usługi montażowe w dziedzinie drzwi, okien, paneli i podłóg, zdobywając zaufanie naszych klientów i budując solidną reputację.',
+    icon: 'bx:bxs-briefcase',
+  },
+  {
+    title: 'Pasja do Wnętrz',
+    description:
+      'Nasza firma powstała z miłości do pięknych i funkcjonalnych wnętrz, co stanowi naszą główną motywację przy tworzeniu przestrzeni, które spełniają oczekiwania i zachwycają estetyką.',
+    icon: 'bx:bxs-home-heart',
+  },
+  {
+    title: 'Zaufanie i Profesjonalizm',
+    description:
+      'Budujemy naszą reputację na zaufaniu, profesjonalizmie i doskonałej obsłudze klienta, zapewniając najwyższą jakość produktów i usług.',
+    icon: 'bx:bxs-check-shield',
+  },
+  {
+    title: 'Starannie Wyselekcjonowane Produkty',
+    description:
+      'Oferujemy szeroki wybór produktów najwyższej jakości, starannie wyselekcjonowanych, aby sprostać różnorodnym potrzebom i preferencjom naszych klientów.',
+    icon: 'bx:bx-bar-chart-alt',
+  },
+  {
+    title: 'Elastyczność i Pomoc',
+    description:
+      'Niezależnie od tego, czy potrzebujesz eleganckich drzwi, energooszczędnych okien, stylowych paneli czy trwałych podłóg, jesteśmy tutaj, aby Ci pomóc i doradzić w każdym kroku.',
+    icon: 'bx:bx-support',
+  },
+  {
+    title: 'Profesjonalne Wykonanie',
+    description:
+      'Nasz doświadczony zespół montażowy gwarantuje również precyzyjne i bezproblemowe wykonanie instalacji, dając Ci pewność, że Twój dom jest w dobrych rękach.',
+    icon: 'bx:bxs-buildings',
+  },
+];
+---
+
+<Container class='px-10'>
+  <div class='mt-16 w-2/3'>
+    <h2 class='text-4xl lg:text-5xl font-bold lg:tracking-tight'>
+      Nasza oferta
+    </h2>
+    <p class='text-lg mt-4 text-slate-600'>
+      Odkryj naszą szeroką gamę produktów, w tym drzwi, okna, panele i podłogi,
+      dostępnych w różnych stylach i kolorach, aby dopasować się do Twoich
+      potrzeb i preferencji.
+    </p>
+  </div>
+
+  <div class='grid sm:grid-cols-2 md:grid-cols-3 mt-10 gap-16'>
+    {
+      features.map((item) => (
+        <div class='flex gap-4 items-start'>
+          <div class='mt-1 bg-slate-600 rounded-full  p-2 w-8 h-8 shrink-0'>
+            <Icon class='text-white' name={item.icon} />
+          </div>
+          <div>
+            <h3 class='font-semibold text-lg'>{item.title}</h3>{' '}
+            <p class='text-slate-500 mt-2 leading-relaxed'>
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Container>
